@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author Yannik Schiebelhut
+ * @author Yannik Schiebelhut, Johannes Peters
  *
  */
 public class InputHelper {
