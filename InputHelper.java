@@ -1,4 +1,4 @@
-package de.schiebelhut.input;
+package de.schiebelhut.misc;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
