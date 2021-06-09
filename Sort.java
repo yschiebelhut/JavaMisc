@@ -3,6 +3,9 @@ package de.schiebelhut.misc;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * @author Yannik Schiebelhut
+ */
 public class Sort {
 //	public static int[] arr;
 	public static int[] arr = { 3, 7, 2, 19, 9, 53, 6, 4, 32, -1 };
