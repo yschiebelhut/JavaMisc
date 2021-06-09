@@ -16,14 +16,14 @@ public class Test {
 			}
 		};
 		System.out.println(Arrays.toString(arr));
-		GenericTest.bubbleSort(arr);
+		Sorting.bubbleSort(arr);
 		System.out.println(Arrays.toString(arr));
-		GenericTest.bubbleSort(arr, c);
+		Sorting.quickSort(arr, c);
 		System.out.println(Arrays.toString(arr));
 
 		Integer[] arr2 = {1,3,4,2,-1};
 		System.out.println(Arrays.toString(arr2));
-		GenericTest.bubbleSort(arr2);
+		Sorting.quickSort(arr2);
 		System.out.println(Arrays.toString(arr2));
 	}
 }
