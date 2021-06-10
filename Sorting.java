@@ -111,34 +111,44 @@ public class Sorting {
 	}
 
 	/**
-	 * sorts the given array of integers with the selection sorting algorithm
+	 * Sort the given array in place with selection sort.
 	 *
-	 * @param pArr array of integer values
-	 * @return sortedArray
+	 * @param a   array to sort
+	 * @param c   Comparator to use for sorting
+	 * @param <E> type of elements to sort
 	 */
-	// TODO: generic
-	public static int[] selectionSort(int[] pArr) {
+	public static <E> void selectionSort(E[] a, Comparator<E> c) {
 		// logically separate the sorted part of the array from the unsorted
-		for (int curPos = 0; curPos < pArr.length; curPos++) {
+		for (int curPos = 0; curPos < a.length; curPos++) {
 			// remember the value from the first unsorted position
-			int min = pArr[curPos];
+			E min = a[curPos];
 			// go through the rest of the unsorted array
-			for (int i = curPos + 1; i < pArr.length; i++) {
+			for (int i = curPos + 1; i < a.length; i++) {
 				// if smaller value is found, insert the current one into the position of the
 				// smaller one and from then remember the new smallest value
-				if (min > pArr[i]) {
-					int tmp = min;
-					min = pArr[i];
-					pArr[i] = tmp;
+				if (c.compare(min, a[i]) > 0) {
+					E tmp = min;
+					min = a[i];
+					a[i] = tmp;
 				}
 			}
 			// paste the smallest value found into the first position of the unsorted array
 			// which then becomes the last position of the sorted part
 			// all other values remain in the array as they just swapped places with the
 			// smallest value
-			pArr[curPos] = min;
+			a[curPos] = min;
 		}
-		return pArr;
+	}
+
+	/**
+	 * Sort the given array in place with selection sort.
+	 *
+	 * @param a   array to sort
+	 * @param <E> type of elements to sort
+	 */
+	public static <E extends Comparable<E>> void selectionSort(E[] a) {
+		Comparator<E> c = Comparable::compareTo;
+		selectionSort(a, c);
 	}
 
 	/**

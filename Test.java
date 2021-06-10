@@ -1,30 +1,42 @@
 package de.schiebelhut.misc;
 
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Random;
 
 /**
  * @author Yannik Schiebelhut
  */
 public class Test {
 	public static void main(String[] args) {
-		String[] arr = {"Hallo", "mein", "Name", "ist", "Yannik"};
-		Comparator<String> c = new Comparator<String>() {
-			@Override
-			public int compare(String o1, String o2) {
-				return o1.compareToIgnoreCase(o2);
-			}
-		};
-		System.out.println(Arrays.toString(arr));
-		Sorting.bubbleSort(arr);
-		System.out.println(Arrays.toString(arr));
-		Sorting.quickSort(arr, c);
-		System.out.println(Arrays.toString(arr));
+//		String[] arr = {"Hallo", "mein", "Name", "ist", "Yannik"};
+//		Comparator<String> c = new Comparator<String>() {
+//			@Override
+//			public int compare(String o1, String o2) {
+//				return o1.compareToIgnoreCase(o2);
+//			}
+//		};
+//		System.out.println(Arrays.toString(arr));
+//		Sorting.bubbleSort(arr);
+//		System.out.println(Arrays.toString(arr));
+//		Sorting.quickSort(arr, c);
+//		System.out.println(Arrays.toString(arr));
+//
+//		Integer[] arr2 = {1,3,4,2,-1};
+//		System.out.println(Arrays.toString(arr2));
+//		Sorting.quickSort(arr2);
+//		System.out.println(Arrays.toString(arr2));
 
-		Integer[] arr2 = {1,3,4,2,-1};
-		System.out.println(Arrays.toString(arr2));
-		Sorting.quickSort(arr2);
-		System.out.println(Arrays.toString(arr2));
+
+		Integer[] arr = new Integer[10];
+		{
+			Random r = new Random();
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = r.nextInt(1000);
+			}
+		}
+		System.out.println(Arrays.toString(arr));
+		Sorting.selectionSort(arr);
+		System.out.println(Arrays.toString(arr));
 	}
 }
 
