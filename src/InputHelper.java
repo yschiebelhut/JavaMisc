@@ -1,3 +1,5 @@
+package src;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -5,6 +7,7 @@ import java.util.Scanner;
  * @author Yannik Schiebelhut, Johannes Peters
  *
  */
+
 public class InputHelper {
 
 	public static double getDoubleInput(String output) {
@@ -58,8 +61,6 @@ public class InputHelper {
 		do {
 			try {
 				Scanner sc = new Scanner(System.in);
-
-
 				System.out.println(output);
 				input = sc.nextInt();
 			} catch (InputMismatchException e) {
@@ -77,5 +78,4 @@ public class InputHelper {
 		System.out.println(output);
 		return sc.next();
 	}
-
 }
