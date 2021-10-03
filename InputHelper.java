@@ -1,11 +1,11 @@
-package src;
+package de.schiebelhut.misc;
 
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
  * @author Yannik Schiebelhut, Johannes Peters
- *
  */
 
 public class InputHelper {
@@ -77,5 +77,28 @@ public class InputHelper {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(output);
 		return sc.next();
+	}
+
+	/**
+	 * Returns a random integer between 0 (inclusive) and upperBound (inclusive)
+	 *
+	 * @param upperBound upper bound of random number (inclusive)
+	 * @return random integer between 0 and upperBound (inclusive)
+	 */
+	public static int getRandomInt(int upperBound) {
+		Random rand = new Random();
+		return rand.nextInt(upperBound + 1);
+	}
+
+	/**
+	 * Returns a random integer between lowerBound and upperBound (inclusive)
+	 *
+	 * @param lowerBound lower bound of random number (inclusive)
+	 * @param upperBound upper bound of random number (inclusive)
+	 * @return random integer between lowerBound and upperBound (inclusive)
+	 */
+	public static int getRandomInt(int lowerBound, int upperBound) {
+		Random rand = new Random();
+		return rand.nextInt(upperBound + 1 - lowerBound) + lowerBound;
 	}
 }
