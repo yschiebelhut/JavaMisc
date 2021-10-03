@@ -56,7 +56,7 @@ public class InputHelper {
 
 	//This Integer input method just checks if the input is in a special range of integer
 	public static int getIntegerInput(String output, int lowerBorder, int upperBorder) {
-		int input = 0;
+		int input = upperBorder + 1;
 
 		do {
 			try {
@@ -68,7 +68,7 @@ public class InputHelper {
 			} catch (Exception a) {
 				System.out.println("different error");
 			}
-		} while (input < lowerBorder | input > upperBorder);
+		} while (input < lowerBorder || input > upperBorder);
 
 		return input;
 	}
