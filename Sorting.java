@@ -1,10 +1,7 @@
-package de.schiebelhut.misc;
+package misc;
 
 import java.util.Comparator;
 
-/**
- * @author Yannik Schiebelhut
- */
 public class Sorting {
 
 	/**

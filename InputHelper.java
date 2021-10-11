@@ -1,12 +1,8 @@
-package de.schiebelhut.misc;
+package misc;
 
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
-
-/**
- * @author Yannik Schiebelhut, Johannes Peters
- */
 
 public class InputHelper {
 
